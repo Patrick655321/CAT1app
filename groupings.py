@@ -1,4 +1,4 @@
-from calendar import day_abbr
+import sys
 
 
 class Staff:
@@ -12,11 +12,10 @@ class Staff:
         self.sat = sat
         self.sun = sun
 
-class Shifts:
-    def __init__(self, day, night):
-        self.day = day
-        self.night = night
+class Shift:
+    def __init__(self, [day], [night])
 
+staff_list = ["Moe", "Grace", "Judith", "Luane", "Fausto", "George", "Paul", "Mykel", "Mustafa", "Maddison", "Allie"]
 
 Moe = Staff("mgr", "both", "both", "both", "both", "both", "both", "both")
 Grace = Staff("mgr", "both", "both", "both", "both", "both", "both", "both")
@@ -30,8 +29,12 @@ Mustafa = Staff("mgr", "both", "both", "both", "both", "both", "both", "both")
 Maddison = Staff("mgr", "both", "both", "both", "both", "both", "both", "both")
 Allie = Staff("mgr", "both", "both", "both", "both", "both", "both", "both")
 
-monday = Shifts({ 
-    "manager" : 1,
+mon = {
+    "mgr" : 1,
     "bar" : 1,
-    "waiter" : 2}, "night")
+    "rest" : 2,
+}
 
+totals = ("Mon", mon["mgr"]+mon["bar"]+mon["rest"])
+
+print(totals)
