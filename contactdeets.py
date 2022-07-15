@@ -5,10 +5,7 @@ def staff_deets():
     for i in staff_list:
         print(i)
     detail_request = input("Which staff member are yout trying to reach?")
-    print(detail_request)
+    if "moe" in detail_request:
+        print(noclassgroup.moe_deets)
 
 staff_deets()
-
-# >>> newdict = {1:0, 2:0, 3:0}
-# >>> newdict.keys()
-# [1, 2, 3]

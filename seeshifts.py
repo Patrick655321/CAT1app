@@ -1,5 +1,3 @@
-from noclassfunc import monday_day_req
-
 
 def _which_day():
     day_input = str.lower(input("Which day would you like to view? "))
@@ -14,5 +12,5 @@ def _see_shift():
         if "day" in _which_shift():
             print("This will be the roster for that shift")
 
-_see_shift()
+
         

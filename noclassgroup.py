@@ -57,4 +57,6 @@ frisat_night = {
     "mgr" : 2,
 }
 
+moe_deets = "Moe Elayoubi\n0400000000\nemail@email.com.au"
+
 
