@@ -1,5 +1,4 @@
 import noclassfunc
-import noclassgroup
 
 # snake_case for functions and variables
 # - PascalCase for classes
@@ -10,4 +9,5 @@ import noclassgroup
 # - use quotation marks consistently 
 
 noclassfunc.roster_intro()
-noclassgroup.testing()
+noclassfunc.monday_day_req()
+noclassfunc._main_menu()

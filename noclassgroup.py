@@ -9,7 +9,7 @@
 # Mustafa = Staff("mgr", "both", "both", "both", "both", "both", "both", "both")
 # Maddison = Staff("mgr", "both", "both", "both", "both", "both", "both", "both")
 # Allie = Staff("mgr", "both", "both", "both", "both", "both", "both", "both")
-
+import noclassfunc 
 staff_avail = {
     "Moe" : "both",
     "Grace" : "both",
@@ -38,11 +38,6 @@ week_day_shift = {
     "mgr" : 1,
 }
 
-def testing():
-    if mon_day_staff != week_day_shift:
-        print(f"""Bar {week_day_shift["bar"] - mon_day_staff["bar"]}""")
-
-testing()
 
 week_night = {
     "bar" : 2,
