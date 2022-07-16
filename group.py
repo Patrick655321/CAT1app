@@ -9,7 +9,7 @@
 # Mustafa = Staff("mgr", "both", "both", "both", "both", "both", "both", "both")
 # Maddison = Staff("mgr", "both", "both", "both", "both", "both", "both", "both")
 # Allie = Staff("mgr", "both", "both", "both", "both", "both", "both", "both")
-import noclassfunc 
+import func 
 staff_avail = {
     "Moe" : "both",
     "Grace" : "both",
@@ -57,6 +57,9 @@ frisat_night = {
     "mgr" : 2,
 }
 
-moe_deets = "Moe Elayoubi\n0400000000\nemail@email.com.au"
+moe_deets = "Moe Elayoubi\n0400000000\nmoe@email.com.au"
+grace_deets = "Grace Rippon\n0400000001\ngrace@email.com.au"
+judith_deets = "Judith Echivarria\n0400000002\njudith@email.com"
+luane_deets = "Luane"
 
 

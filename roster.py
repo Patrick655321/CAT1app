@@ -1,5 +1,4 @@
-import functions
-import groupings
+import func
 
 # snake_case for functions and variables
 # - PascalCase for classes
@@ -9,5 +8,6 @@ import groupings
 # - avoid extremely long lines (I am sometimes guilty of this one too)
 # - use quotation marks consistently 
 
-
-functions.roster_intro()
+func.roster_intro()
+func.monday_day_req()
+func._main_menu()
