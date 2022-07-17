@@ -1,15 +1,4 @@
-# Moe = Staff("mgr", "both", "both", "both", "both", "both", "both", "both")
-# Grace = Staff("mgr", "both", "both", "both", "both", "both", "both", "both")
-# Judith = Staff("mgr", "both", "both", "both", "both", "both", "both", "both")
-# Luane = Staff("mgr", "both", "both", "both", "both", "both", "both", "both")
-# Fausto = Staff("mgr", "both", "both", "both", "both", "both", "both", "both")
-# George = Staff("mgr", "both", "both", "both", "both", "both", "both", "both")
-# Paul = Staff("mgr", "both", "both", "both", "both", "both", "both", "both")
-# Mykel = Staff("mgr", "both", "both", "both", "both", "both", "both", "both")
-# Mustafa = Staff("mgr", "both", "both", "both", "both", "both", "both", "both")
-# Maddison = Staff("mgr", "both", "both", "both", "both", "both", "both", "both")
-# Allie = Staff("mgr", "both", "both", "both", "both", "both", "both", "both")
-import func 
+
 staff_avail = {
     "Moe" : "both",
     "Grace" : "both",
@@ -30,6 +19,7 @@ mon_day_staff = {
     "mgr" : 0,
 }
 
+
 mon_night_staff  = []
 
 week_day_shift = {
@@ -37,7 +27,6 @@ week_day_shift = {
     "rest" : 2,
     "mgr" : 1,
 }
-
 
 week_night = {
     "bar" : 2,

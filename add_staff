@@ -1,12 +1,6 @@
-
 import group
+from schedule import schedule
 
-
-onshift = {
-    "mgr" : [],
-    "bar" : [],
-    "rest" : []
-    }
 
 staff_list = list(group.staff_avail.keys())
 # _bartender = input("Who will be tending the bar this shift? ")
@@ -24,19 +18,13 @@ def _which_shift():
 def add_staff():
     _which_day()
     _which_shift()
-
-    if int(len(onshift["mgr"]) < int(group.week_day_shift["mgr"])):
+    if int(len(schedule[_which_day][_which_shift]["mgr"]) < int(group.week_day_shift["mgr"])):
         _manager = input(str("Who will be managing this shift? "))
-        if _manager in staff_list and not _manager in onshift:
-            onshift["mgr"] += [_manager]
+        if _manager in staff_list and not _manager in schedule.schedule[_which_day][_which_shift]["mgr"]:
+            schedule[_which_day][_which_shift]["mgr"].append(_manager)
         else:
-            onshift["mgr"] = onshift["mgr"]
-        return onshift
+            pass
+        return schedule[_which_day][_which_shift]["mgr"]
 
-
-
-
-
-
-
-
+add_staff()
+print(schedule)

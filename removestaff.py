@@ -1,3 +1,4 @@
+
 import group
 
 onshift = {
@@ -20,6 +21,3 @@ def remove_staff():
         onshift["mgr"].remove(remove)
         return onshift
 
-print(onshift)
-remove_staff()
-print(onshift)

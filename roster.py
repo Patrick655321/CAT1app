@@ -1,4 +1,5 @@
 import func
+from schedule import schedule
 
 # snake_case for functions and variables
 # - PascalCase for classes
@@ -11,3 +12,8 @@ import func
 func.roster_intro()
 func.monday_day_req()
 func._main_menu()
+
+
+
+
+

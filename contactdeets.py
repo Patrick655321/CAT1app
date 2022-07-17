@@ -5,7 +5,5 @@ def staff_deets():
     for i in staff_list:
         print(i)
     detail_request = input("Which staff member are yout trying to reach?")
-    if "moe" in detail_request:
+    if "moe" in detail_request.lower():
         print(group.moe_deets)
-
-staff_deets()
