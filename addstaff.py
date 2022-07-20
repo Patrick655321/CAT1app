@@ -1,4 +1,5 @@
 from schedule import schedule
+from func import _main_menu
 import func
 user_input = ""
 
@@ -11,5 +12,5 @@ def _add_staff():
         test2 = input("Which staff would you like to add to this shift? ")
         schedule[str.lower(input_day)][str.lower(input_shift)][str.lower(input_role)] += [test2]
         _continue = input("Add more staff?")
-    else:
-        func._main_menu
+
+        

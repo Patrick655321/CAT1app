@@ -1,39 +1,78 @@
-from ast import Import
 import group
-import seeshifts
-import addstaff
-import removestaff
-import contactdeets
-from os import system
+from schedule import schedule
+import func
+
+
+user_input = ""
+
+def primary_input():
+        input_day = input(str.lower("Which day are you working with? "))
+        input_shift = input(str.lower("Which shift are you working with? "))
+        input_role = input(str.lower("Which role are you working with? "))
+
+
+def _add_staff():
+    _continue = "Y"
+    while _continue.upper() != "N":
+        input_day = input(str.lower("Which day are you working with? "))
+        input_shift = input(str.lower("Which shift are you working with? "))
+        input_role = input(str.lower("Which role are you working with? "))
+        test2 = input("Which staff would you like to add to this shift? ")
+        schedule[str.lower(input_day)][str.lower(input_shift)][str.lower(input_role)] += [test2]
+        _continue = input("Add more staff (Y/N)?")
+
+
+def remove_staff():
+    _continue = "Y"
+    while _continue.upper() != "N":
+        input_day = input(str.lower("Which day are you working with? "))
+        input_shift = input(str.lower("Which shift are you working with? "))
+        input_role = input(str.lower("Which role are you working with? "))
+        remove = input(str.lower("Who would you like to remove from this shift? "))
+        if remove in schedule[input_day][input_shift][input_role]:
+            schedule[input_day][input_shift][input_role].remove(remove)
+        else:
+            print("Invalid Input")
+        _continue = input("Remove more staff (Y/N)?")
+
+def _see_shift():
+    _continue = "Y"
+    while _continue.upper() != "N":
+        input_day = input(str.lower("Which day are you working with? "))
+        input_shift = input(str.lower("Which shift are you working with? "))
+        print(schedule[input_day][input_shift])
+        _continue = input("View another shift?")
+    else:
+        _main_menu()
+
+
 
 def roster_intro():
     print("Welcome to RosterRight, your one-stop anachronistic rostering service that noone will probably use!")
-    print("According to shift prerequisites the following shifts require staff:")
 
-
-def monday_day_req():
-    if group.mon_day_staff != group.week_day_shift:
-        print(f"""
-        -Mon
-        Management: {group.week_day_shift["mgr"] - group.mon_day_staff["mgr"]}
-        Bar: {group.week_day_shift["bar"] - group.mon_day_staff["bar"]}
-        Wait Staff: {group.week_day_shift["rest"] - group.mon_day_staff["rest"]}
-        """)
-user_input = ""
 def _main_menu():
-    while user_input != "exit":
+    user_input = "empty"
+    while not "x" in user_input.lower():
         print("Please select from one of the following options:")
         print("1. See staff on shift")
         print("2. Add staff to shift")
         print("3. Remove staff from shift")
         print("4. Staff contact details")
-        print("Enter 'main!' at any point to return to this menu")
+        print("Enter 'main!' at any point to return to this menu. Type ")
         user_input = input("You may enter a number or quote the option:  ")
         if user_input == "1" or "see" in user_input.lower():
-            return seeshifts._see_shift()
+            return _see_shift()
         elif user_input == "2" or "add" in user_input.lower():
-            return addstaff.add_staff()
+            return _add_staff()
         elif user_input == "3" or "remove" in user_input.lower():
-            return removestaff.remove_staff()
+            return remove_staff()
         elif user_input =="4" or "contact" in user_input.lower():
             return contactdeets.staff_deets
+        else:
+            print("\n\nInvalid Command\n------------\n")
+    return exit
+
+_main_menu()
+
+
+
