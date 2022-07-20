@@ -1,26 +1,15 @@
 
 staff_avail = {
-    "Moe" : "both",
-    "Grace" : "both",
-    "Judith" : "both",
-    "Fausto" : "both",
-    "George" : "both",
-    "Paul" : "both",
-    "Mykel" : "both",
-    "Mustafa" : "both",
-    "Allie" : "both",
-    "Mustafa" : "both"
+    "moe" : "Moe Elayoubi\n04481245157\nmoe@email.com.au",
+    "grace" : "Grace Knight\n04481245157\ngrace@email.com.au",
+    "judith" : "Judith Espanza\n04481245157\njudith@email.com.au",
+    "fausto" :  "Fausto Sanchez\n04481245157\nfausto@email.com.au",
+    "george" :  "George McMann\n04481245157\ngeorge@email.com.au",
+    "paul" :  "Paul Platt\n04481245157\npaul@email.com.au",
+    "mykel" :  "Mykel Lavjent\n04481245157\nmykel@email.com.au",
+    "mustafa" :  "Mustafa Manzana\n04481245157\nmustafa@email.com.au",
+    "allie" :  "Allie Engel\n04481245157\nallie@email.com.au"
 }
-
-
-mon_day_staff = {
-    "bar" : 0,
-    "rest" : 0,
-    "mgr" : 0,
-}
-
-
-mon_night_staff  = []
 
 week_day_shift = {
     "bar" : 1,
@@ -45,10 +34,5 @@ frisat_night = {
     "rest" : 5,
     "mgr" : 2,
 }
-
-moe_deets = "Moe Elayoubi\n0400000000\nmoe@email.com.au"
-grace_deets = "Grace Rippon\n0400000001\ngrace@email.com.au"
-judith_deets = "Judith Echivarria\n0400000002\njudith@email.com"
-luane_deets = "Luane"
 
 

@@ -1,6 +1,6 @@
 import group
 from schedule import schedule
-import func
+import os
 
 
 user_input = ""
@@ -20,6 +20,8 @@ def _add_staff():
         test2 = input("Which staff would you like to add to this shift? ")
         schedule[str.lower(input_day)][str.lower(input_shift)][str.lower(input_role)] += [test2]
         _continue = input("Add more staff (Y/N)?")
+    os.system('cls')
+    _main_menu()
 
 
 def remove_staff():
@@ -34,6 +36,8 @@ def remove_staff():
         else:
             print("Invalid Input")
         _continue = input("Remove more staff (Y/N)?")
+    os.system('cls')
+    _main_menu()
 
 def _see_shift():
     _continue = "Y"
@@ -42,8 +46,21 @@ def _see_shift():
         input_shift = input(str.lower("Which shift are you working with? "))
         print(schedule[input_day][input_shift])
         _continue = input("View another shift?")
-    else:
-        _main_menu()
+    os.system('cls')
+    _main_menu()
+
+def staff_deets():
+    _continue = "Y"
+    while _continue.upper() != "N":
+        staff_list = list(group.staff_avail.keys())
+        for i in staff_list:
+            print(str.capitalize(i))
+        detail_request = input("Which staff member are yout trying to reach?")
+        if detail_request.lower() in group.staff_avail.keys():
+            print(group.staff_avail[detail_request.lower()])
+        _continue = input("View another shift?")
+    os.system('cls')
+    _main_menu()
 
 
 
@@ -67,12 +84,9 @@ def _main_menu():
         elif user_input == "3" or "remove" in user_input.lower():
             return remove_staff()
         elif user_input =="4" or "contact" in user_input.lower():
-            return contactdeets.staff_deets
+            return staff_deets()
         else:
             print("\n\nInvalid Command\n------------\n")
     return exit
 
 _main_menu()
-
-
-

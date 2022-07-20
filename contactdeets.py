@@ -5,5 +5,7 @@ def staff_deets():
     for i in staff_list:
         print(i)
     detail_request = input("Which staff member are yout trying to reach?")
-    if "moe" in detail_request.lower():
-        print(group.moe_deets)
+    if detail_request.lower() in group.staff_avail.keys():
+        print(group.staff_avail[detail_request])
+
+staff_deets()
