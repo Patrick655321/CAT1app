@@ -1,4 +1,5 @@
 from fileinput import filename
+from tkinter import N
 import group
 from schedule import schedule
 import os
@@ -34,17 +35,21 @@ def _add_staff():
         input_day = input(str.lower("Which day are you working with? "))
         input_shift = input(str.lower("Which shift are you working with? "))
         input_role = input(str.lower("Which role are you working with? "))
-        test2 = input("Which staff would you like to add to this shift? ")
-        try:
-            schedule[str.lower(input_day)][input_shift][input_role] += [test2]
-        except KeyError:
-            print("Please check your spelling and try again")
-        _continue = input("Add more staff (Y/N)?")
+        add_staff = input("Which staff would you like to add to this shift? ")
+        if add_staff in group.staff_avail:
+            try:
+                schedule[input_day][input_shift][input_role] += [add_staff]
+            except KeyError:
+                print("Please check your spelling and try again")
+            _continue = input("Add more staff (Y/N)?")
+        else:
+            print("Uknown Name")
+            pass
     os.system('cls')
-    _main_menu()
+    main_menu()
 
 
-def remove_staff():
+def _remove_staff():
     _continue = "Y"
     while _continue.upper() != "N":
         input_day = input(str.lower("Which day are you working with? "))
@@ -60,7 +65,7 @@ def remove_staff():
             print("Invalid Input")
         _continue = input("Remove more staff (Y/N)?")
     os.system('cls')
-    _main_menu()
+    main_menu()
 
 def _see_shift():
     _continue = "Y"
@@ -73,7 +78,7 @@ def _see_shift():
             print("Please check your spelling and try again")
         _continue = input("View another shift?")
     os.system('cls')
-    _main_menu()
+    main_menu()
 
 def _staff_deets():
     _continue = "Y"
@@ -89,7 +94,7 @@ def _staff_deets():
                 print("Please check your spelling and try again")
         _continue = input("View another shift?")
     os.system('cls')
-    _main_menu()
+    main_menu()
 
 def _create_staff():
     new_name = input("What is the name of the staff member you wish to create?")
@@ -99,14 +104,14 @@ def _create_staff():
         email_add = input("Please enter a valid email address for staff:  ")
         group.staff_avail[new_name] = [full_name, phone_no, email_add]
     os.system('cls')
-    _main_menu()
+    main_menu()
 
 def save_roster():
     w = csv.writer(open(f"New Roster.csv", "w"))
     for key, val in schedule.items():
         w.writerow([key, val])
 
-def _main_menu():
+def main_menu():
     user_input = "empty"
     while not "x" in user_input.lower():
         frontend()
@@ -116,7 +121,7 @@ def _main_menu():
         elif user_input == "2" or "add" in user_input.lower():
             return _add_staff()
         elif user_input == "3" or "remove" in user_input.lower():
-            return remove_staff()
+            return _remove_staff()
         elif user_input =="4" or "contact" in user_input.lower():
             return _staff_deets()
         elif user_input == "5" or "create" in user_input.lower():
@@ -129,4 +134,4 @@ def _main_menu():
             time.sleep(1)
     return quit()
 
-_main_menu()
+main_menu()
