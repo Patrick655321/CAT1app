@@ -1,15 +1,31 @@
+from fileinput import filename
 import group
 from schedule import schedule
 import os
+import csv
+import time
 
+def get_day():
+    day = input(str.lower("Which day are you working with? "))
+    return day
 
-user_input = ""
+def get_shift():
+    shift = input(str.lower("Which shift are you working with? "))
+    return shift
 
-def primary_input():
-        input_day = input(str.lower("Which day are you working with? "))
-        input_shift = input(str.lower("Which shift are you working with? "))
-        input_role = input(str.lower("Which role are you working with? "))
+def get_role():
+    role = input(str.lower("Which role are you working with? "))
+    return role
 
+def frontend():
+    print("Welcome to RosterRight, your one-stop anachronistic rostering service!")
+    print("Please select from one of the following options:")
+    print("1. See staff on shift")
+    print("2. Add staff to shift")
+    print("3. Remove staff from shift")
+    print("4. Staff contact details")
+    print("5. Export roster to Latest Roster File")
+    print("Type 'exit' to exit program.")
 
 def _add_staff():
     _continue = "Y"
@@ -18,7 +34,7 @@ def _add_staff():
         input_shift = input(str.lower("Which shift are you working with? "))
         input_role = input(str.lower("Which role are you working with? "))
         test2 = input("Which staff would you like to add to this shift? ")
-        schedule[str.lower(input_day)][str.lower(input_shift)][str.lower(input_role)] += [test2]
+        schedule[input_day][input_shift][input_role] += [test2]
         _continue = input("Add more staff (Y/N)?")
     os.system('cls')
     _main_menu()
@@ -62,20 +78,15 @@ def staff_deets():
     os.system('cls')
     _main_menu()
 
-
-
-def roster_intro():
-    print("Welcome to RosterRight, your one-stop anachronistic rostering service that noone will probably use!")
+def save_roster():
+    w = csv.writer(open(f"New Roster.csv", "w"))
+    for key, val in schedule.items():
+        w.writerow([key, val])
 
 def _main_menu():
     user_input = "empty"
     while not "x" in user_input.lower():
-        print("Please select from one of the following options:")
-        print("1. See staff on shift")
-        print("2. Add staff to shift")
-        print("3. Remove staff from shift")
-        print("4. Staff contact details")
-        print("Enter 'main!' at any point to return to this menu. Type ")
+        frontend()
         user_input = input("You may enter a number or quote the option:  ")
         if user_input == "1" or "see" in user_input.lower():
             return _see_shift()
@@ -85,8 +96,12 @@ def _main_menu():
             return remove_staff()
         elif user_input =="4" or "contact" in user_input.lower():
             return staff_deets()
-        else:
+        elif user_input =="5" or "save" in user_input.lower():
+            save_roster()
+        elif not "x" in user_input:
+            os.system('cls')
             print("\n\nInvalid Command\n------------\n")
-    return exit
+            time.sleep(1)
+    return quit()
 
 _main_menu()
