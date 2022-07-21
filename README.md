@@ -1,5 +1,14 @@
 # Welcome to the Roster-Right App, created in 2022 by Patrick Hamer of the Coder Academy.
 
+## R4 Provide a link to your source control repository
+My source control repository can be found at the following URL:
+[Patrick on Github](https://github.com/Patrick655321/CAT1app)
+
+## R5 Identify any style guide or styling conventions that the application will adhere to:
+For this app I have used the **PEP 8 – Style Guide for Python Code** by Guido van Rossum, Barry Warsaw and Nick Coghlan. See reference section for further information.
+
+
+
 ## The Roster-Right app is a basic rostering app allowing the user to maniuplate a 7 day roster of both day and night shifts to suit their needs.
 
 ### Navigate a main menu
@@ -20,5 +29,6 @@ Given that staff cannot be added without profiles the user has the ability to cr
 The extensive use of dictionaries led to a lot of KeyError issues while testing, so this has been compensated for with try/except code, ensuring the app doesn't crash if invalid data is entered.
 
 
+## References
 
-
+G. Rossum, B. Warsaw & M. Coghlan, 2001, PEP 8 – Style Guide for Python Code, 21/07/2022, https://peps.python.org/pep-0008/#imports
