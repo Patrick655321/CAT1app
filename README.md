@@ -4,7 +4,8 @@
 My source control repository can be found at the following URL:
 [Patrick on Github](https://github.com/Patrick655321/CAT1app)
 
-## R5 Identify any style guide or styling conventions that the application will adhere to:
+## R5 Identify any style guide or styling conventions that the application will adhere to:  
+## Reference the chosen style guide appropriately.
 For this app I have used the **PEP 8 – Style Guide for Python Code** by Guido van Rossum, Barry Warsaw and Nick Coghlan. See reference section for further information.
 
 

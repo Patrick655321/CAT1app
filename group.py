@@ -1,38 +1,15 @@
 
 staff_avail = {
-    "moe" : "Moe Elayoubi\n04481245157\nmoe@email.com.au",
-    "grace" : "Grace Knight\n04481245157\ngrace@email.com.au",
-    "judith" : "Judith Espanza\n04481245157\njudith@email.com.au",
-    "fausto" :  "Fausto Sanchez\n04481245157\nfausto@email.com.au",
-    "george" :  "George McMann\n04481245157\ngeorge@email.com.au",
-    "paul" :  "Paul Platt\n04481245157\npaul@email.com.au",
-    "mykel" :  "Mykel Lavjent\n04481245157\nmykel@email.com.au",
-    "mustafa" :  "Mustafa Manzana\n04481245157\nmustafa@email.com.au",
-    "allie" :  "Allie Engel\n04481245157\nallie@email.com.au"
+    "moe" : ["Moe Elayoubi", "04481245157", "moe@email.com.au"],
+    "grace" : ["Grace Knight", "04481245157", "grace@email.com.au"],
+    "judith" : ["Judith Espanza", "04481245157", "judith@email.com.au"],
+    "fausto" :  ["Fausto Sanchez", "04481245157", "fausto@email.com.au"],
+    "george" :  ["George McMann", "04481245157", "george@email.com.au"],
+    "paul" :  ["Paul Platt", "04481245157", "paul@email.com.au"],
+    "mykel" :  ["Mykel Lavjent", "04481245157", "mykel@email.com.au"],
+    "mustafa" :  ["Mustafa Manzana", "04481245157", "mustafa@email.com.au"],
+    "allie" :  ["Allie Engel", "04481245157", "allie@email.com.au"]
 }
 
-week_day_shift = {
-    "bar" : 1,
-    "rest" : 2,
-    "mgr" : 1,
-}
-
-week_night = {
-    "bar" : 2,
-    "rest" : 3,
-    "mgr" : 2,
-}
-
-frisat_day = {
-    "bar" : 2,
-    "rest" : 4,
-    "mgr" : 2,
-}
-
-frisat_night = {
-    "bar" : 3,
-    "rest" : 5,
-    "mgr" : 2,
-}
-
-
+days = [
+    "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
