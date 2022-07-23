@@ -30,7 +30,7 @@ def _add_staff():
         add_staff = input(str.lower("Which staff would you like to add to this shift? "))
         if str.lower(add_staff) in group.staff_avail:
             try:
-                schedule[str.lower(funnel_info[0])][str.lower(funnel_info[1])][str.lower(funnel_info[2])].append(add_staff)
+                schedule[str.lower(funnel_info[0])][str.lower(funnel_info[1])][str.lower(funnel_info[2])].append(str.lower(add_staff))
             except KeyError:
                 print("Please check your spelling and try again")
         else:
