@@ -33,7 +33,7 @@ def _add_staff():
             except KeyError:
                 print("Please check your spelling and try again")
             _continue = input("Add more staff (Y/N)?")
-    os.system('cls')
+    os.system('clear')
     main_menu()
 
 def _remove_staff():
@@ -47,18 +47,19 @@ def _remove_staff():
             except KeyError:
                 print("Please check your spelling and try again")
         _continue = input("Remove more staff (Y/N)?")
-    os.system('cls')
+    os.system('cls' if os.name == 'nt' else 'clear')
     main_menu()
 
 def _see_shift():
     _continue = "Y"
     while _continue.upper() != "N":
+        funnel_info = _shift_funnel()
         try:
             print(schedule[funnel_info[0]][funnel_info[1]])
         except KeyError:
             print("Please check your spelling and try again")
         _continue = input("View another shift?")
-    os.system('cls')
+    os.system('cls' if os.name == 'nt' else 'clear')
     main_menu()
 
 def _staff_deets():
@@ -74,7 +75,7 @@ def _staff_deets():
             except KeyError:
                 print("Please check your spelling and try again")
         _continue = input("View another shift?")
-    os.system('cls')
+    os.system('cls' if os.name == 'nt' else 'clear')
     main_menu()
 
 def _create_staff():
@@ -84,7 +85,7 @@ def _create_staff():
         phone_no = input("Please enter their phone number:  ")
         email_add = input("Please enter a valid email address for staff:  ")
         group.staff_avail[new_name] = [full_name, phone_no, email_add]
-    os.system('cls')
+    os.system('cls' if os.name == 'nt' else 'clear')
     main_menu()
 
 def save_roster():
@@ -110,7 +111,7 @@ def main_menu():
         elif user_input =="6" or "save" in user_input.lower():
             save_roster()
         elif not "x" in user_input:
-            os.system('cls')
+            os.system('cls' if os.name == 'nt' else 'clear')
             print("\n\nInvalid Command\n------------\n")
             time.sleep(1)
     return quit()
