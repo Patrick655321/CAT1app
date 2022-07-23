@@ -5,18 +5,13 @@ from schedule import schedule
 import os
 import csv
 import time
+def shift_funnel():
+    input_day = input(str.lower("Which day are you working with? "))
+    input_shift = input(str.lower("Which shift are you working with? "))
+    input_role = input(str.lower("Which role are you working with? "))
+        #return the 3 inputs in a list
+    return [input_day, input_shift, input_role]
 
-def get_day():
-    day = input(str.lower("Which day are you working with? "))
-    return day
-
-def get_shift():
-    shift = input(str.lower("Which shift are you working with? "))
-    return shift
-
-def get_role():
-    role = input(str.lower("Which role are you working with? "))
-    return role
 
 def frontend():
     print("Welcome to Roster-Right, your one-stop anachronistic rostering service!")
@@ -32,37 +27,27 @@ def frontend():
 def _add_staff():
     _continue = "Y"
     while _continue.upper() != "N":
-        input_day = input(str.lower("Which day are you working with? "))
-        input_shift = input(str.lower("Which shift are you working with? "))
-        input_role = input(str.lower("Which role are you working with? "))
+        funnel_info = shift_funnel()
         add_staff = input("Which staff would you like to add to this shift? ")
-        if add_staff in group.staff_avail:
+        if str.lower(add_staff) in group.staff_avail:
             try:
-                schedule[input_day][input_shift][input_role] += [add_staff]
+                schedule[funnel_info[0]][funnel_info[1]][funnel_info[2]].append(add_staff)
             except KeyError:
                 print("Please check your spelling and try again")
             _continue = input("Add more staff (Y/N)?")
-        else:
-            print("Uknown Name")
-            pass
     os.system('cls')
     main_menu()
-
 
 def _remove_staff():
     _continue = "Y"
     while _continue.upper() != "N":
-        input_day = input(str.lower("Which day are you working with? "))
-        input_shift = input(str.lower("Which shift are you working with? "))
-        input_role = input(str.lower("Which role are you working with? "))
+        funnel_info = shift_funnel()
         remove = input(str.lower("Who would you like to remove from this shift? "))
-        if remove in schedule[input_day][input_shift][input_role]:
+        if str.lower(remove) in schedule[funnel_info[0]][funnel_info[1]][funnel_info[2]]:
             try:
-                schedule[input_day][input_shift][input_role].remove(remove)
+                schedule[funnel_info[0]][funnel_info[1]][funnel_info[2]].remove(str.lower(remove))
             except KeyError:
                 print("Please check your spelling and try again")
-        else:
-            print("Invalid Input")
         _continue = input("Remove more staff (Y/N)?")
     os.system('cls')
     main_menu()
