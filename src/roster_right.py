@@ -44,10 +44,10 @@ def _remove_staff():
     while _continue.upper() != "N":
         funnel_info = _shift_funnel()
         remove = input(str.lower("Who would you like to remove from this shift? "))
-        if remove in schedule[funnel_info[0]][funnel_info[1]][funnel_info[2]]:
-            try:
+        try:
+            if remove in schedule[funnel_info[0]][funnel_info[1]][funnel_info[2]]:
                 schedule[funnel_info[0]][str.lower(funnel_info[1])][str.lower(funnel_info[2])].remove(str.lower(remove))
-            except KeyError:
+        except KeyError:
                 print("Please check your spelling and try again")
         _continue = input("Remove more staff (Y/N)?")
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -90,6 +90,7 @@ def _create_staff():
         email_add = input("Please enter a valid email address for staff:  ")
         group.staff_avail[new_name] = [full_name, phone_no, email_add]
     os.system('cls' if os.name == 'nt' else 'clear')
+    print("\n---STAFF ADDED TO DATABASE---\n")
     main_menu()
 
 def save_roster():
@@ -97,6 +98,7 @@ def save_roster():
     for key, val in schedule.items():
         w.writerow([key, val])
     os.system('cls' if os.name == 'nt' else 'clear')
+    print("\n---FILE SAVED---\n")
 
 def main_menu():
     user_input = "empty"
