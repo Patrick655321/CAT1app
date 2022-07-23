@@ -1,1 +1,1 @@
-python3 func.py
+python3 roster_right.py

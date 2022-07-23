@@ -3,6 +3,8 @@ from schedule import schedule
 import os
 import csv
 import time
+
+
 def _shift_funnel():
     input_day = input(str.lower("Which day are you working with? "))
     input_shift = input(str.lower("Which shift are you working with? "))
@@ -29,7 +31,7 @@ def _add_staff():
         add_staff = input("Which staff would you like to add to this shift? ")
         if str.lower(add_staff) in group.staff_avail:
             try:
-                schedule[funnel_info[0]][funnel_info[1]][funnel_info[2]].append(add_staff)
+                schedule[str.lower(funnel_info[0])][str.lower(funnel_info[1])][str.lower(funnel_info[2])].append(add_staff)
             except KeyError:
                 print("Please check your spelling and try again")
             _continue = input("Add more staff (Y/N)?")
@@ -43,7 +45,7 @@ def _remove_staff():
         remove = input(str.lower("Who would you like to remove from this shift? "))
         if str.lower(remove) in schedule[funnel_info[0]][funnel_info[1]][funnel_info[2]]:
             try:
-                schedule[funnel_info[0]][funnel_info[1]][funnel_info[2]].remove(str.lower(remove))
+                schedule[str.lower(funnel_info[0])][str.lower(funnel_info[1])][str.lower(funnel_info[2])].remove(str.lower(remove))
             except KeyError:
                 print("Please check your spelling and try again")
         _continue = input("Remove more staff (Y/N)?")
@@ -55,7 +57,7 @@ def _see_shift():
     while _continue.upper() != "N":
         funnel_info = _shift_funnel()
         try:
-            print(schedule[funnel_info[0]][funnel_info[1]])
+            print(schedule[str.lower(funnel_info[0])][str.lower(funnel_info[1])])
         except KeyError:
             print("Please check your spelling and try again")
         _continue = input("View another shift?")
