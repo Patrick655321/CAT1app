@@ -12,7 +12,7 @@ def _shift_funnel():
     return [str.lower(input_day), str.lower(input_shift), str.lower(input_role)]
 
 
-def _frontend():
+def FRONTEND():
     print("Welcome to Roster-Right, your one-stop anachronistic rostering service!")
     print("Please select from one of the following options:")
     print("1. See staff on shift")
@@ -23,6 +23,7 @@ def _frontend():
     print("6. Export roster to 'Latest Roster' File")
     print("Type 'exit' to exit program.")
 
+
 def _add_staff():
     _continue = "Y"
     while _continue.upper() != "N":
@@ -31,6 +32,7 @@ def _add_staff():
         if str.lower(add_staff) in group.staff_avail:
             try:
                 schedule[str.lower(funnel_info[0])][str.lower(funnel_info[1])][str.lower(funnel_info[2])].append(str.lower(add_staff))
+                print("Staff added to shift")
             except KeyError:
                 print("Please check your spelling and try again")
         else:
@@ -38,6 +40,7 @@ def _add_staff():
         _continue = input("Add more staff (Y/N)?")
     os.system('clear')
     main_menu()
+
 
 def _remove_staff():
     _continue = "Y"
@@ -47,11 +50,13 @@ def _remove_staff():
         try:
             if remove in schedule[funnel_info[0]][funnel_info[1]][funnel_info[2]]:
                 schedule[funnel_info[0]][str.lower(funnel_info[1])][str.lower(funnel_info[2])].remove(str.lower(remove))
+                print("Staff Removed")
         except KeyError:
                 print("Please check your spelling and try again")
         _continue = input("Remove more staff (Y/N)?")
     os.system('cls' if os.name == 'nt' else 'clear')
     main_menu()
+
 
 def _see_shift():
     _continue = "Y"
@@ -65,6 +70,7 @@ def _see_shift():
         _continue = input("View another shift?")
     os.system('cls' if os.name == 'nt' else 'clear')
     main_menu()
+
 
 def _staff_deets():
     _continue = "Y"
@@ -93,6 +99,7 @@ def _create_staff():
     print("\n---STAFF ADDED TO DATABASE---\n")
     main_menu()
 
+
 def save_roster():
     w = csv.writer(open(f"New Roster.csv", "w"))
     for key, val in schedule.items():
@@ -100,10 +107,11 @@ def save_roster():
     os.system('cls' if os.name == 'nt' else 'clear')
     print("\n---FILE SAVED---\n")
 
+
 def main_menu():
     user_input = "empty"
     while not "x" in user_input.lower():
-        _frontend()
+        FRONTEND()
         user_input = input("You may enter a number or quote the option:  ")
         if user_input == "1" or "see" in user_input.lower():
             return _see_shift()
@@ -122,5 +130,6 @@ def main_menu():
             print("\n\nInvalid Command\n------------\n")
             time.sleep(1)
     return quit()
+
 
 main_menu()
