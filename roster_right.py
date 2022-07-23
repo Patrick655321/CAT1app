@@ -83,9 +83,9 @@ def _staff_deets():
     main_menu()
 
 def _create_staff():
-    new_name = input("What is the name of the staff member you wish to create?")
+    new_name = input (str.lower("What is the name of the staff member you wish to create?"))
     if not new_name in group.staff_avail.keys():
-        full_name = input("Please type complete name  you wish to appear in the database:  ")
+        full_name = input("Please type complete name (Capitalized) you wish to appear in the database:  ")
         phone_no = input("Please enter their phone number:  ")
         email_add = input("Please enter a valid email address for staff:  ")
         group.staff_avail[new_name] = [full_name, phone_no, email_add]
@@ -96,6 +96,7 @@ def save_roster():
     w = csv.writer(open(f"New Roster.csv", "w"))
     for key, val in schedule.items():
         w.writerow([key, val])
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 def main_menu():
     user_input = "empty"
