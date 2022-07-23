@@ -1,5 +1,12 @@
 # Welcome to the Roster-Right App, created in 2022 by Patrick Hamer of the Coder Academy.
 
+## HELP
+This documeent is aimed at explaining to educators how I met requirements for the rubric. For help file type
+```
+open_rr.sh help
+```
+or if using windows access the **windows_help.md** file.
+
 ## R4 Provide a link to your source control repository
 My source control repository can be found at the following URL:
 [Patrick on Github](https://github.com/Patrick655321/CAT1app)
@@ -24,6 +31,7 @@ Given that staff cannot be added without profiles the user has the ability to cr
 
 ### Error handling
 The extensive use of dictionaries led to a lot of KeyError issues while testing, so this has been compensated for with try/except code, ensuring the app doesn't crash if invalid data is entered.
+Also the use of proper nouns was a large issue. All data is now stored in lower case with all necessary inputs directed to be lowercase as well to avoid throwing up errors as the user navigates the program.
 
 R5	
 Identify any code style guide or styling conventions that the application will adhere to.
