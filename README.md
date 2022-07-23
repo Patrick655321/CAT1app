@@ -10,7 +10,7 @@ For this app I have used the **PEP 8 – Style Guide for Python Code** by Guido 
 
 ## R6 Develop a list of features that will be included in the application:  
 ### Navigate a main menu
-Using functions and variables the program allows users to select from a list at the beginning, returning them to it whenever they have completed their task until they type exit. This is done using a combination of variables (for the menu items themselves) and loops (once in the secondary program)
+Using functions and variables the program allows users to select from a list at the beginning, returning them to it whenever they have completed their task until they type exit. This is done using a combination of variables (for the menu items themselves) and loops (once in the secondary functions)
 Once an item has been selected the a variable is created and while that value is not equal to "N" the loop will repeat the task, from input to return. At the end of each loop or if an error is encountered the user is given the option to continue, or to change stop, which changes the initial variable which in turn clears the screen and starts at the main menu again.
 
 ### Edit a roster template:

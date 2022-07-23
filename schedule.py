@@ -1,86 +1,86 @@
 schedule = {
     "monday" : {
         "day" : {
-            "manager" : ["Moe"],
-            "bar" : ["Grace"],
-            "restaurant" : ["Mykel", "Patrick"]
+            "manager" : ["moe"],
+            "bar" : ["grace"],
+            "restaurant" : ["mykel", "patrick"]
             },
         "night" : {
-            "manager" : ["Mustafa"],
-            "bar" : ["Fausto", "George"],
+            "manager" : ["mustafa"],
+            "bar" : ["fausto", "george"],
             "restaurant" : []
         }
         },
     "tuesday" : {
         "day" : {
-            "manager" : ["Judith"],
-            "bar" : ["Grace"],
-            "restaurant" : ["Mykel", "Patrick"]
+            "manager" : ["judith"],
+            "bar" : ["grace"],
+            "restaurant" : ["mykel", "patrick"]
             },
         "night" : {
-            "manager" : ["Mustafa",],
-            "bar" : ["Maddie", "Patrick"],
-            "restaurant" : ["Patrick", "Luane", "Allie"]
+            "manager" : ["mustafa",],
+            "bar" : ["Maddie", "patrick"],
+            "restaurant" : ["patrick", "Luane", "allie"]
         }
         },
     "wednesday" : {
         "day" : {
-            "manager" : ["Judith"],
-            "bar" : ["Grace"],
-            "restaurant" : ["Mykel", "Patrick", "Allie"]
+            "manager" : ["judith"],
+            "bar" : ["grace"],
+            "restaurant" : ["mykel", "patrick", "allie"]
             },
         "night" : {
-            "manager" : ["Patrick"],
-            "bar" : ["George", "Judith"],
-            "restaurant" : ["Charlotte", "Allie"]
+            "manager" : ["patrick"],
+            "bar" : ["george", "judith"],
+            "restaurant" : ["Charlotte", "allie"]
         }
         },
     "thursday" : {
         "day" : {
-            "manager" : ["Moe"],
-            "bar" : ["Grace"],
-            "restaurant" : ["Mykel"]
+            "manager" : ["moe"],
+            "bar" : ["grace"],
+            "restaurant" : ["mykel"]
             },
         "night" : {
             "manager" : [],
-            "bar" : ["Fausto", "George"],
-            "restaurant" : ["Allie"]
+            "bar" : ["fausto", "george"],
+            "restaurant" : ["allie"]
         }
         },
     "friday" : {
         "day" : {
-            "manager" : ["Moe"],
+            "manager" : ["moe"],
             "bar" : [],
-            "restaurant" : ["Mykel"]
+            "restaurant" : ["mykel"]
             },
         "night" : {
-            "manager" : ["Mustafa", "Allie"],
-            "bar" : ["Fausto", "George"],
-            "restaurant" : ["Allie"]
+            "manager" : ["mustafa", "allie"],
+            "bar" : ["fausto", "george"],
+            "restaurant" : ["allie"]
         }
         },
     "saturday" : {
         "day" : {
-            "manager" : ["Moe"],
+            "manager" : ["moe"],
             "bar" : [],
             "restaurant" : []
             },
         "night" : {
-            "manager" : ["Mustafa", "Allie"],
-            "bar" : ["Fausto", "George"],
-            "restaurant" : ["Allie"]
+            "manager" : ["mustafa", "allie"],
+            "bar" : ["fausto", "george"],
+            "restaurant" : ["allie"]
         }
         },
     "sunday" : {
         "day" : {
-            "manager" : ["Moe"],
-            "bar" : ["Grace"],
+            "manager" : ["moe"],
+            "bar" : ["grace"],
             "restaurant" : []
             },
         "night" : {
-            "manager" : ["Mustafa", "Allie"],
-            "bar" : ["Fausto", "George"],
-            "restaurant" : ["Allie"]
+            "manager" : ["mustafa", "allie"],
+            "bar" : ["fausto", "george"],
+            "restaurant" : ["allie"]
         }
         },
     }

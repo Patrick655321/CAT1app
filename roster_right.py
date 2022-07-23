@@ -28,13 +28,15 @@ def _add_staff():
     _continue = "Y"
     while _continue.upper() != "N":
         funnel_info = _shift_funnel()
-        add_staff = input("Which staff would you like to add to this shift? ")
+        add_staff = input(str.lower("Which staff would you like to add to this shift? "))
         if str.lower(add_staff) in group.staff_avail:
             try:
                 schedule[str.lower(funnel_info[0])][str.lower(funnel_info[1])][str.lower(funnel_info[2])].append(add_staff)
             except KeyError:
                 print("Please check your spelling and try again")
-            _continue = input("Add more staff (Y/N)?")
+        else:
+            print("Staff not in database, please add staff using 'Create Profile' feature")
+        _continue = input("Add more staff (Y/N)?")
     os.system('clear')
     main_menu()
 
@@ -76,7 +78,7 @@ def _staff_deets():
                 print(group.staff_avail[detail_request.lower()])
             except KeyError:
                 print("Please check your spelling and try again")
-        _continue = input("View another shift?")
+        _continue = input("View another staff profile?")
     os.system('cls' if os.name == 'nt' else 'clear')
     main_menu()
 
