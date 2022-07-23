@@ -11,6 +11,3 @@ staff_avail = {
     "allie" :  ["Allie Engel", "04481245157", "allie@email.com.au"],
     "patrick" : ["Patrick Von Ham", "0448124157", "patrick@email.com"]
 }
-
-days = [
-    "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]

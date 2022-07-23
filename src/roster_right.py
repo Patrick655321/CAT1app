@@ -6,11 +6,10 @@ import time
 
 
 def _shift_funnel():
-    input_day = input(str.lower("Which day are you working with? "))
-    input_shift = input(str.lower("Which shift are you working with? "))
-    input_role = input(str.lower("Which role are you working with? "))
-        #return the 3 inputs in a list
-    return [input_day, input_shift, input_role]
+    input_day = input("Which day are you working with? ")
+    input_shift = input("Which shift are you working with? ")
+    input_role = input("Which role are you working with? ")
+    return [str.lower(input_day), str.lower(input_shift), str.lower(input_role)]
 
 
 def _frontend():
@@ -45,9 +44,9 @@ def _remove_staff():
     while _continue.upper() != "N":
         funnel_info = _shift_funnel()
         remove = input(str.lower("Who would you like to remove from this shift? "))
-        if str.lower(remove) in schedule[funnel_info[0]][funnel_info[1]][funnel_info[2]]:
+        if remove in schedule[funnel_info[0]][funnel_info[1]][funnel_info[2]]:
             try:
-                schedule[str.lower(funnel_info[0])][str.lower(funnel_info[1])][str.lower(funnel_info[2])].remove(str.lower(remove))
+                schedule[funnel_info[0]][str.lower(funnel_info[1])][str.lower(funnel_info[2])].remove(str.lower(remove))
             except KeyError:
                 print("Please check your spelling and try again")
         _continue = input("Remove more staff (Y/N)?")

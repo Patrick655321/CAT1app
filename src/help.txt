@@ -36,32 +36,32 @@ directory created by the clone and then typing
 open_rr.sh
 ```
 
-### Using the app
+Using the app
 ----------------------------
 Once in the app the process is linear. You will be greeted with a menu which will allow you to select an option.
 Follow the prompts on the screen to guide you through the process of adding/removing staff and viewing rosters.
 User input is not case sensitive.
 Please not when creating staff profiles the initial request for a name will be the name on the appearing on the roster. A first and last name can be added in the following section "Staff Details". Staff Details ARE Case sensitive when being entered as input.
 
-### Features
+Features
 ----------------------------
-#### View Shifts
+View Shifts
 This feature allows the user to narrow down to a shift by which day it is and whether it is day or night shift and then displays a list of all staff working and the capacity in which they will be working
 
-#### Add Staff
+Add Staff
 Add Staff allows the user to add staff from the existing database into different shifts that need to be filled. Staff need to be in the database (Staff Profiles) before they can be added to a shift.
 
-#### Remove Staff
+Remove Staff
 As the name suggests this feature allows the user to remove staff from any shift they are working. If the staff are NOT working that shift the program will simplyu ask if any further staff would like to be removed, offering a chance to leave teh sub-menu.
 
-#### Staff Contact Details
+Staff Contact Details
 This feature presents the user with a list of staff using their roster names and allows them to type in the name of who they want to see and then view their details.
 
-#### Create new profile
+Create new profile
 This feature allows the entry of new staff profiles into the database so that they can be added to shifts.
 
-#### Export Roster
+Export Roster
 This feature creates **New Roster.csv** which will contain a hard copy of all the changes made which will be able to be printed or emailed to somebody else. The **New Roster.csv** file will be overwritten everytrime the user exports.
 
-#### Exit
+Exit
 Exits the program.
